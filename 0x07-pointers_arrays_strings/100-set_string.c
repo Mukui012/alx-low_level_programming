@@ -3,8 +3,8 @@
 /**
  * set_string - sets value of pointer to char
  *
- * @s: pointer 1
- * @to: value that is copied by pointer
+ * @s: pointer to pointer
+ * @to: pointer to char
  * Return: void
  */
 
