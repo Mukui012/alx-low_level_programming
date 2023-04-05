@@ -4,10 +4,9 @@
  * strlen1 - returns string length
  * @s: string to measure
  * @k: measure of string
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * return: 1(success), -1(error)
  */
+
 int strlen1(char *s, int k)
 {
 	if (*s == 0)
@@ -16,33 +15,29 @@ int strlen1(char *s, int k)
 }
 
 /**
- * palind3 - compares string vs string reverse
- * @s: string
- * @k: length
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * palindrome1 - performs comparison
+ * @s: string to be checked
+ * @k: length of string
+ * return: 1(success), -1(error)
  */
 
-int palind3(char *s, int k)
+int palindrome1(char *s, int k)
 {
 	if (*s != *(s + k))
 		return (0);
 	if (*s == 0)
 		return (1);
-	return (palind3(s + 1, k - 2));
+	return (palindrome1(s + 1, k - 2));
 }
 /**
- * is_palindrome - checks if a string is a palindrome
- * @s: string to evaluate
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * is_palindrome - returns 1 for palindrome
+ * @s: string
+ * return: 1(success),-1(error)
  */
 int is_palindrome(char *s)
 {
-	int l;
+	int m;
 
-	l = strlen1(s, 0);
-	return (palind3(s, l));
+	m = strlen1(s, 0);
+	return (palindrome1(s, m));
 }
