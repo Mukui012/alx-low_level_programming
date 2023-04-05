@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * strlen1 - returns string length
+ * strlen1 - returns length of string
  * @s: string to measure
  * @k: measure of string
- * return: 1(success), -1(error)
+ * Return: 1(success), -1(error)
  */
 
 int strlen1(char *s, int k)
@@ -18,7 +18,7 @@ int strlen1(char *s, int k)
  * palindrome1 - performs comparison
  * @s: string to be checked
  * @k: length of string
- * return: 1(success), -1(error)
+ * Return: 1(success), -1(error)
  */
 
 int palindrome1(char *s, int k)
@@ -32,7 +32,7 @@ int palindrome1(char *s, int k)
 /**
  * is_palindrome - returns 1 for palindrome
  * @s: string
- * return: 1(success),-1(error)
+ * Return: 1(success),-1(error)
  */
 int is_palindrome(char *s)
 {
