@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	}
 	for (x = 1; argv[x]; x++)
 	{
-		y = strtol(argv[x], &flag, 10);
+		y = strtol(argv[x], &str1, 10);
 		if (*str1)
 		{
 			printf("Error\n");
