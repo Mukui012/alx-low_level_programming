@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 	k = 1, j = 0, coins = 0;
 	if (argc == 2)
 	{
-		if (_isnumber(argv[1]))
+		if (_isdigit(argv[1]))
 		{
 			k = 0, cents = atoi(argv[1]);
 			if (cents >= 0)
