@@ -31,11 +31,11 @@ char **strtow(char *str)
 	n = 0;
 	for (m = 0; m < length && n < sum; m++)
 	{
-		if (str[m] != " ")
+		if (str[m] != ' ')
 		{
 			int k = m;
 
-			while (k < length && str[k] != " ")
+			while (k < length && str[k] != ' ')
 				k++;
 			strArr[n] = (char *)malloc(sizeof(char) * (k - m + 1));
 			if (strArr[n] == NULL)
