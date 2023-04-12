@@ -11,47 +11,47 @@
 
 char **strtow(char *str)
 {
-	int m, n, length, wordCount;
-	char **strArray;
+	int m, n, length, sum;
+	char **strArr;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
 	length = strlen(str);
-	wordCount = 0;
+	sum = 0;
 	for (m = 0; m < length; m++)
 	{
 		if (str[m] != ' ' && (m == 0 || str[m - 1] == ' '))
-			wordCount++;
+			sum++;
 	}
-	strArray = (char **)malloc(sizeof(char *) * (wordCount + 1));
-	if (strArray ==  NULL)
+	strArr = (char **)malloc(sizeof(char *) * (sum + 1));
+	if (strArr ==  NULL)
 		return (NULL);
 
 	n = 0;
-	for (m = 0; m < length && n < wordCount; m++)
+	for (m = 0; m < length && n < sum; m++)
 	{
-		if (str[m] != ' ')
+		if (str[m] != " ")
 		{
 			int k = m;
 
-			while (k < length && str[k] != ' ')
+			while (k < length && str[k] != " ")
 				k++;
-			strArray[n] = (char *)malloc(sizeof(char) * (k - m + 1));
-			if (strArray[n] == NULL)
+			strArr[n] = (char *)malloc(sizeof(char) * (k - m + 1));
+			if (strArr[n] == NULL)
 			{
 				for (n--; n >= 0; n--)
-					free(strArray[n]);
-				free(strArray);
+					free(strArr[n]);
+				free(strArr);
 				return (NULL);
 			}
-			strncpy(strArray[n], str + m, k - m);
-			strArray[n][k - m] = '\0';
+			strncpy(strArr[n], str + m, k - m);
+			strArr[n][k - m] = '\0';
 			n++;
 			m = k;
 		}
 	}
-	strArray[wordCount] = NULL;
-	return (strArray);
+	strArr[sum] = NULL;
+	return (strArr);
 }
 
