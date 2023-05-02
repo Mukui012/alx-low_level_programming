@@ -21,7 +21,7 @@ listint_t *find_listint_loop(listint_t *head)
 		while (temp && find != temp)
 		{
 			if (find == temp->next)
-				return (check);
+				return (find);
 			find = find->next;
 		}
 	}
