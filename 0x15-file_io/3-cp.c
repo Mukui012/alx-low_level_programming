@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		if (f_read == -1)
 			__exit(98, argv[1], 0);
 
-		f_write = write(fd_2, buffer, n_read);
+		f_write = write(fd_2, buffer, f_read);
 		if (f_write == -1)
 			__exit(99, argv[2], 0);
 	}
