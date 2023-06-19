@@ -4,15 +4,12 @@
  * @s: char to be checked
  * Return: length of string
  */
+
 int _strlen(char *s)
 {
-	int i;
+	int n = 0;
 
-	i = 0;
-	while (*s)
-	{
-		i += 1;
-		s++;
-	}
-	return (i);
+	while (*(s + n) != '\0')
+		n++;
+	return (n);
 }
