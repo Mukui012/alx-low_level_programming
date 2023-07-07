@@ -85,4 +85,4 @@ typedef struct shash_table_s
 	shash_node_t *stail;
 } shash_table_t;
 
-#endif
+#endif /* HASH_TABLES_H */
